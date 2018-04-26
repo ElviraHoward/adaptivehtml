@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лабораторная работа№1</title>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+    <div class="header-logo">
+        <img src="img/if_Cake_2138189.svg">
+    </div>
+    <div class="header-title"> Каталог выпечки </div>
+    <div class="header-links">
+        <a class="active" href="#home">Логин</a>
+        <a href="#contact">Регистрация</a>
+        <a href="#about">Подписаться на RSS</a>
+    </div>
+</header>
+<nav class="nav">
+    <ul>
+        <li class="current"><a href="#">Главная</a></li>
+        <li><a href="#">Рецепты</a></li>
+        <li><a href="#">Что-то ещё</a></li>
+    </ul>
+</nav>
+<div id="app">
+    <h2>О чем сайт</h2>
+    <p v-for="item in content"> {{item.description}} </p>
+    <div class="tvshow" v-for="item in content">
+        <h3>Рецепт</h3>
+        <img src="img/cake.svg" class="thumbnail">
+        <p class="showdescription">{{item.recipe}}</p>
+
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <div>
+        <img src="img/if_icon-comment_2867882.svg" class="comment"></div>
+    </div>
+    <div class="tvshow">
+        <h3>Рецепт</h3>
+        <img src="img/cake.svg" class="thumbnail">
+        <p class="showdescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <div><img src="img/if_icon-comment_2867882.svg" class="comment"></div>
+    </div>
+    <div class="tvshow">
+        <h3>Рецепт</h3>
+        <img src="img/cake.svg" class="thumbnail">
+        <p class="showdescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <div><img src="img/if_icon-comment_2867882.svg" class="comment"></div>
+    </div>
+    <div class="tvshow">
+        <h3>Рецепт</h3>
+        <img src="img/cake.svg" class="thumbnail">
+        <p class="showdescription"></p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star "></span>
+        <span class="fa fa-star "></span>
+        <span class="fa fa-star "></span>
+        <span class="fa fa-star"></span>
+        <div><img src="img/if_icon-comment_2867882.svg" class="comment"></div>
+    </div>
+    <div class="tvshow">
+        <h3>Рецепт</h3>
+        <img src="img/cake.svg" class="thumbnail">
+        <p class="showdescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star "></span>
+        <span class="fa fa-star "></span>
+        <span class="fa fa-star"></span>
+        <div><img src="img/if_icon-comment_2867882.svg" class="comment"></div>
+    </div>
+</div>
+<footer>
+    <div class="footer-nav">
+        <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Помощь</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            content: [{
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Septem autem illi non suo, sed populorum suffragio\n' +
+                '        omnium\n' +
+                '        nominati sunt. Itaque sensibus rationem adiunxit et ratione effecta sensus non reliquit. Videmus igitur ut\n' +
+                '        conquiescere ne infantes quidem possint. Quod iam a me expectare noli.',
+                recipe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            }]
+        }
+    })
+</script>
