@@ -127,12 +127,10 @@ footer {
     border-radius: 5px;
 }
 
-/* right nav */
 .nav.right ul {
     text-align: right;
 }
 
-/* center nav */
 .nav.center ul {
     text-align: center;
 }
