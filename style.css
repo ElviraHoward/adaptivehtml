@@ -2,6 +2,8 @@ body {
     background: #FFF2CD;
     color: black;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
 header {
@@ -49,9 +51,11 @@ img {
 }
 .recipes {
     width: 150px;
-    height: 150px;
+    height: 100%;
     text-align: center;
     display: inline-block;
+    flex-direction: column;
+    min-height: 60vh;
 }
 
 .thumbnail {
@@ -67,10 +71,8 @@ img {
     height: 20px;
 }
 footer {
-    float: end;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    display: table-row;
+    height: 1px;
 }
 
 .footer-nav {
